@@ -22,9 +22,12 @@ int main()
 	clear();
 	system("TITLE Got Milk?");
 	system("COLOR 0A");
+	title();
+	credits();
+	pause();
 	int milk = 0;
 	int reg = 0;
-
+	clear();
 	noEffect("You awaken on an early spring Morning. The bright morning sun is shining through your window,\nblinding you as you struggle to force your eyes open.  Suddenly, your stomach rumbles violently.\nYou are hungry.  At your age, and in these days and times, the only viable option for food is of\ncourse cereal.  You walk to the kitchen and open the cabinet. Your mouth waters at the sight of \ntwo cereal boxes.  One says Cap'n Crunch.  The other:  Reese's Puffs.  \nWhich cereal do you choose?  Enter the cereal's corresponding number and then press Enter.\n","Cap'n Crunch", "Reese's Puffs", "", "");
 	cout << "\n";
 	clear();
@@ -125,8 +128,6 @@ int main()
 		cout << endl << endl;
 		pause();
 		exit(1);
-
-	//cout << endl << endl; pause();
 
 
 
