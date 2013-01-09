@@ -16,3 +16,6 @@ void clear();
 int twoChoice(string descript, string opOne, string opTwo);
 void noEffect(string descript, string opOne, string opTwo, string answerOne, string answerTwo);
 void resize (int Width, int Height);
+void title();
+void credits();
+

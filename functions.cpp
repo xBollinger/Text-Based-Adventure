@@ -84,3 +84,39 @@ void resize(int Width, int Height)
     SetConsoleScreenBufferSize(Handle, coord);            // Set Buffer Size
     SetConsoleWindowInfo(Handle, TRUE, &Rect);            // Set Window Size
     }
+
+void title(){
+	cout<<"  _____       _     __  __ _ _ _   ___  ";
+	cout << endl;
+	cout<<" / ____|     | |   |  \\/  (_) | | |__ \\ ";
+	cout << endl;
+	cout<<"| |  __  ___ | |_  | \\  / |_| | | __ ) |";
+	cout << endl;
+	cout<<"| | |_ |/ _ \\| __| | |\\/| | | | |/ // / ";
+	cout << endl;
+	cout<<"| |__| | (_) | |_  | |  | | | |   <|_|  ";
+	cout << endl;
+	cout<<" \\_____|\\___/ \\__| |_|  |_|_|_|_|\\_(_)  ";
+	cout << endl;
+	cout << endl;
+}
+
+void credits(){
+	cout<<" __      .     .  .          .  .      .   ._.     .     .  .      ";
+	cout << endl;
+	cout<<"/  ` _  _| _  _|  |_   . *   |\\/|*._  _| _ |,|_  _ |_  _ | _| _ ._.";
+	cout << endl;
+	cout<<"\\__.(_)(_](/,(_]  [_)\\_| *   |  ||[ )(_](_)| [_)(/,[ )(_)|(_](/,[  ";
+	cout << endl;
+	cout<<"                     ._|                                           ";
+	cout << endl;
+	cout<<".  .     ,  ,         .             .__    ..             ";
+	cout << endl;
+	cout<<"|  |._.*-+--+- _ ._   |_   . *   \\./[__) _ ||*._  _  _ ._.";
+	cout << endl;
+	cout<<"|/\\|[  | |  | (/,[ )  [_)\\_| *   /'\\[__)(_)|||[ )(_](/,[  ";
+	cout << endl;
+	cout<<"                         ._|                     ._|      ";
+	cout << endl;
+	cout << endl;
+}
