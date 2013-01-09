@@ -1,0 +1,26 @@
+id ICON "C:\gotmilk.ico"
+
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "MindofBollinger"
+      VALUE "FileDescription", "A wonderful mini text based adventure game."
+      VALUE "FileVersion", "1.0"
+      VALUE "InternalName", "text-based-adventure"
+      VALUE "LegalCopyright", "MindofBollinger"
+      VALUE "OriginalFilename", "GotMilk.exe"
+      VALUE "ProductName", "Got Milk?"
+      VALUE "ProductVersion", "1.0"
+    END
+  END
+
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
