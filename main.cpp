@@ -22,9 +22,32 @@ int main()
 	clear();
 	system("TITLE Got Milk?");
 	system("COLOR 0A");
+
+	/********************
+	 * Opening Sequence *
+	 ********************/
+
 	title();
 	credits();
 	pause();
+	clear();
+
+	/*************************
+	 * Window Resize Warning *
+	 *************************/
+
+	cout << endl;
+	cout << endl;
+	cout << "It may be necessary to drag the bottom right corner of this window\nuntil the bottom scroll bar disappears so that you can read all of the game text.";
+	cout << endl;
+	cout << endl;
+	pause();
+
+	/****************
+	 * Story Begins *
+	 ****************/
+
+	start:
 	int milk = 0;
 	int reg = 0;
 	clear();
@@ -41,6 +64,10 @@ int main()
 	cout << endl;
 	cout << "You walk in, the magical doors opening for you.  You feel like a God among men.  You notice a small\ngroup of people near the registers purchasing goods.  You observe your surroundings and notice the\ndairy section at the far rear of the fortress.  It's just not your day today, now is it?  You\nquickly make your way to the dairy section and face the wall of cow-excreted beauty.\nYou are faced with a choice.\n";
 
+	/******************
+	 * Milk Selection *
+	 ******************/
+
 	switch(twoChoice("Will you choose 2% milk or whole milk?","2%","Whole Milk")){
 	case 1:
 		milk = 1;
@@ -53,6 +80,9 @@ int main()
 	}
 	cout << "You open the cooler door and firmly take the milk.  Glory is now in your hands!  Quickly now!\nQuickly to the registers!  As you reach the front of the store you come to a halt.. Your jaw drops\nto the floor. The small group of customers you noticed upon arrival has grown to a violent mob. You\nquickly and desperately scan for the best possible route out of this hellish place.  You see two\npossible escapes.";
 
+	/**********************
+	 * Register Selection *
+	 **********************/
 
 	registerSelect:
 	switch(twoChoice("You must choose. Register 1 or Register 3?","Register 1","Register 3")){
@@ -81,12 +111,21 @@ int main()
 		goto registerSelect;
 	}
 	registerOver:
+	cout << endl << endl;
 	pause();
 	clear();
+
+	/*****************
+	 * Leaving Store *
+	 *****************/
 
 	cout << "You jump back on your noble steed and race home.  You are so happy you practically fly over the\nmountains and curbs. These being only subtle nuisances.  You quickly arrive at your humble abode.\nYou are thoroughly prepared for the orgasmic taste of this milk and cereal. You tremble at the\nthought. I could go on but I'd be quoting Fifty Shades.\n\n";
 
 	cout << "You rush through the door and spring into the kitchen.  You notice your bowl is not where you left\nit. Upon further investigation you notice a similar bowl in the sink.  Two cereal boxes rest on the\nkitchen counter. You suddenly feel uneasy and unsure of your current situation.  You slowly and\ncarefully walk towards the counter. You grab a bowl and then grab the cereal box.  You attempt to\npour the cereal..EMPTY! Nothing but crumbs... Sweat pours down your face.  A massive knot forms in\nyour stomach.  You desperately reach for the other box of cereal and quickly tilt it and pour.\nEMPTY! AGAIN!  What foul trouble is this? What evil witchcraft has befallen your cereal!  Suddenly, you hear footsteps.  They approach like thunder. Closer and closer.  You turn quickly.  Your\nsibling stands in front of you.  You both stare at each other. Then your sibling asks 'Did you get\nany more cereal while you were out?  I ate the last of it.' A look of hatred, a look of contempt\nshoots through your eyes.  You glare at your sibling... And then realize... Your journey.. It was\nall for nothing.  You drop to your knees and reach to the heavens. 'Why, God? Why?!!' A single\nsolitary tear runs down your cheek.  You then ask yourself....\n";
+
+	/***************
+	 * Drink Milk? *
+	 ***************/
 
 	glassMilk:
 	switch(twoChoice("Would you like a glass of milk?","Yes","No")){
@@ -108,7 +147,7 @@ int main()
 		cout << "FIN";
 		cout << endl << endl;
 		pause();
-		exit(1);
+		goto playAgain;
 	}
 	if(milk == 2){
 		clear();
@@ -117,7 +156,7 @@ int main()
 		cout << "FIN";
 		cout << endl << endl;
 		pause();
-		exit(1);
+		goto playAgain;
 	}
 
 	noMilkEnding:
@@ -127,10 +166,24 @@ int main()
 		cout << "FIN";
 		cout << endl << endl;
 		pause();
-		exit(1);
 
+		playAgain:
+		clear();
+		cout << endl;
+		cout << endl;
+		switch(twoChoice("Would you like to play again?", "Yes", "No")){
+		case 1:
+			clear();
+			title();
+			pause();
+			goto start;
 
+		case 2:
+			exit(1);
 
+		default:
+			goto playAgain;
+		}
 
 
 }

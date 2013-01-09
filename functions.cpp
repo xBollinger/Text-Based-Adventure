@@ -8,16 +8,31 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include <windows.h>
+#include <windows.h> // for resizing the window
 using namespace std;
+
+/*****************************
+ * Used in inserting a pause *
+ *****************************/
 
 void pause(){
 	system("PAUSE");
 }
 
+/*******************************************
+ * Used in clearing out the console screen *
+ *******************************************/
+
 void clear(){
 	system("CLS");
 }
+
+/***************************************
+ * A function that allows the designer *
+ * to create a choice that does have   *
+ * an effect on future aspects of the  *
+ * story.                              *
+ ***************************************/
 
 int twoChoice(string descript, string opOne, string opTwo){
 	int choice =0;
@@ -37,6 +52,11 @@ int twoChoice(string descript, string opOne, string opTwo){
 
 
 }
+
+/*************************************************
+ * A function that allows the designer to create *
+ * a choice that has no effect on the story      *
+ *************************************************/
 
 void noEffect(string descript, string opOne, string opTwo, string answerOne, string answerTwo){
 	int choice =0;
@@ -66,7 +86,9 @@ void noEffect(string descript, string opOne, string opTwo, string answerOne, str
 
 }
 
-#include <windows.h>
+/*************************************
+ * Used for resizing the game window *
+ *************************************/
 
 void resize(int Width, int Height)
     {
@@ -85,6 +107,10 @@ void resize(int Width, int Height)
     SetConsoleWindowInfo(Handle, TRUE, &Rect);            // Set Window Size
     }
 
+	/***********************
+	 * Displays "GotMilk?" *
+	 ***********************/
+
 void title(){
 	cout<<"  _____       _     __  __ _ _ _   ___  ";
 	cout << endl;
@@ -100,6 +126,10 @@ void title(){
 	cout << endl;
 	cout << endl;
 }
+
+/**********************************************************************************
+ * Credit Sequence that displays "Coded by: Mindofbeholder Written by: xBollinger *
+ **********************************************************************************/
 
 void credits(){
 	cout<<" __      .     .  .          .  .      .   ._.     .     .  .      ";
